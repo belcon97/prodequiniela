@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
+:root{
+  --primary-font: 'Poppins', sans-serif;
+  --title-font: 'Inter', sans-serif;
+  --secondary-font: 'Inter', sans-serif;
+
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: #646464;
+  --secondary-color: #dbdbdb;
+  --primary-bg-color: #f2f2f2;
+  --secondary-bg-color: #f0f0e6;
+
+  --blue-color: #02245b;
+  --secondary-blue-color: #0063e0;
+  --red-color: #ff2525;
+
+  --mobile-size: .75rem;
+  --desktop-size: 1rem;
+  --title-size: 1.5rem;
+
+  --color-border: #ccc;
+}
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--white);
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 .75rem;
+}
+
+
+/* ==================== HEADER ==================== */
+.header{
+  background-color: var(--blue-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  border-bottom: 1px solid var(--white);
+}
+/* logo */
+.title-logo img{
+  display: flex;
+  max-width: 160px;
+}
+/* nav */
+.nav{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: height .5s linear;
+}
+.downScroll{
+  height: 60px;
+}
+.nav__menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background: var(--blue-color);
+  width: 75%;
+  height: 100%;
+  padding: 4rem 0 0 3rem;
+  transition: right .5s;
+  overflow-y: auto;
+}
+.show-menu{
+  right: 0;
+}
+.btn_toggle svg{
+  color:  var(--white);
+}
+.nav__toggle, .nav__close{
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.nav__links{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 1s;
+}
+.nav__link:is(:link, :active, :visited){
+  color:  var(--white);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.nav__link:is(:link, :active, :visited).nav__link--active{
+  color:  var(--red-color);
+  font-weight: 600;
+
+}
+.nav__link:hover{
+  color:  var(--red-color);
+  font-weight: 600;
+}
+
+
+/* ==================== FOOTER ==================== */
+.footer{
+  background-color: var(--red-color);
+  width: 100%;
+  border-top: 1px solid  var(--white);
+}
+.footer__distributed {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 2.5rem 1.875rem;
+  gap: 1.5rem;
+}
+.footer__distributed--contact{
+  text-align: center;
+  padding: 2.5rem 1.875rem 2.5rem;
+}
+.footer__distributed .footer__left, .footer__distributed .footer__right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  gap: .75rem;
+}
+
+/* footer left */
+.footer__distributed h3 {
+  font-family: var(--title-font);
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.footer__distributed .footer__links {
+  color: var(--white);
+  font-size: var(--mobile-size);
+}
+.footer__distributed .footer__links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+.footer__distributed .footer-copyright {
+  color:  var(--white);
+  font-size: var(--mobile-size);
+}
+
+/* footer right */
+.footer__right div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.footer__distributed .footer__right div p{
+  cursor: pointer;
+  transition: padding .3s linear;
+}
+.footer__distributed .footer__right div p:hover{
+  padding-left: .5rem;
+}
+.footer__distributed .footer__right p {
+  display: inline-block;
+  color: var(--white);
+  text-align: left;
+  font-size: var(--mobile-size);
+}
+.footer__distributed .footer__right p a {
+  color: var(--white);
+  text-decoration: none;
+  ;
+}
+
+/* footer right */
+.footer__distributed .footer__icons {
+  display: flex;
+  gap: 1rem;
+}
+.footer__distributed .footer__icons a {
+  width: 30px;
+  height: 30px;
+  background-color: #d5bcdb22;
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--white);
+  transition: color .4s;
+}
+.footer__distributed .footer__icons a:hover {
+  color: #df4141;
+}
+
+  /* ==================== GO TO TOP ==================== */
+.go-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--secondary-blue-color);
+  border: 3px solid var(--secondary-blue-color);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: var(--transition-1);
+  z-index: 2;
+}
+.go-top.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.main{
+  margin: 25vh auto 5vh;
+  padding: 0 10px;
+}
+/* ==================== INICIO ==================== */
+.title__section{
+  min-width: 350px;
+  font-size: 16px;
+  color: var(--secondary-blue-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary-blue-color);
+  margin: 20px 0;
+  padding-bottom: 5px;
+  
+}
+
+.btn__planilla{
+  background-color: var(--red-color);
+  text-align: center;
+  padding: 12px;
+}
+.btn__planilla a{
+  font-family: var(--secondary-font);
+  color: var(--white);
+  text-decoration:underline;
+}
+
+/* ==================== TABLA ==================== */
+.main__table{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+}
+.table__quiniela{
+  min-width: 345px;
+  margin: auto;
+  border: 1px solid var(--blue-color);
+  border-collapse: collapse;
+  padding: 10px;
+  font-size: 13px;
+}
+.table__quiniela-inicio{
+  margin:  auto;
+  border: 1px solid var(--blue-color);
+  border-collapse: collapse;
+  padding: 10px;
+}
+.table__quiniela td{
+  color:  var(--blue-color);
+  border: 1px solid var(--blue-color);
+  padding: 10px;
+  text-align: center;
+}
+.table__quiniela th{
+  color:  var(--red-color);
+  border: 1px solid var(--blue-color);
+  padding: 8px;
+  background-color: #d6d6d634;
+}
+.tdata-center{
+  text-align: center;
+}
+.tdata-text{
+  color: var(--blue-color);
+}
+.caption__table{
+  color: var(--blue-color);
+  padding: 12px; 
+  border-left: 1px solid var(--blue-color); 
+  border-right: 1px solid var(--blue-color); 
+  border-top: 1px solid var(--blue-color); 
+  font-weight: 700;
+}
+.table__teams{
+  font-size: 14px;
+}
+.title__section--table{
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding-left: 26px;
+}
+.matchplayed{
+  background-color: #959ca3;
+}
+.match-victory{
+  background-color: #31cb00;
+}
+.match-defeat{
+  background-color: #f80500;
+}
+.match-draw{
+  background-color: #fed400;
+}
+/* ==================== CALENDARIO ==================== */
+.calendario{
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.matches{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.matches__day{
+  color: var(--red-color);
+  font-weight: 700;
+  font-size: 14px;
+}
+.matches__list{
+  color: var(--blue-color);
+  border-radius: 12px;
+  border: 1px solid #aeaeae22;
+  box-shadow: 2px 1px 8px 1px #aeaeae22;
+  padding: 12px 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  min-width: 320px;
+}
+.matches__teams{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.matches__team{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.matches__team-img{
+  max-width: 28px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+.matches__subtitle{
+  font-size: 12px;
+}
+
+
+  /* ==================== REGLAS ==================== */
+.main__reglas{
+  margin: 25vh auto 5vh;
+  max-width: 600px;
+}
+.section__reglas{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.article__reglas p{
+  padding-bottom: 12px;
+}
+
+  /* ==================== CONTACT ==================== */
+.contact{
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  justify-items: center;
+}
+.contact__box_info{
+  color: var(--primary-color);
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contact__box_info > h3{
+  text-align: center;
+  font-size: 2rem;
+}
+.contact__data{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__data > p{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .75rem;
+  font-size: var(--mobile-size);
+}
+.contact__data > p > a{
+  color: var(--primary-color);
+}
+.contact__links{
+  display: flex;
+  gap: 2rem;
+}
+.contact__links > a{    
+  width: 32px;
+  height: 32px;
+  background-color: #837b85b1;
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--white);
+  transition: color .4s;
+}
+.contact__form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+.contact__input_box{
+  position: relative;
+}
+.contact__input_box > input, .contact__input_box > textarea{
+  width: 100%;
+  height: 30px;
+  padding: 0 .25rem;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-bottom .4s;
+}
+.contact__input_box > input{
+  padding-bottom: 10px;
+}
+.contact__map{
+  height: 50vh;
+  padding-bottom: 2rem;
+}
+.contact__btn{
+  border: 0px;
+  padding: 15px 55px;
+  font-weight: 300;
+  background-color: var(--primary-color);
+  color: var(--white);
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-family: var(--primary-font);
+  transition: all .3s;
+}
+.contact__btn:hover{
+  background-color:var(--white);
+  outline: 1px solid var(--color-border);
+  color: var(--primary-color);
+}
+.contact__input_box > input:focus, .contact__input_box > textarea:focus{
+  border-bottom: 1px solid var(--color-border);
+}
+.contact__input_box > input::placeholder, .contact__input_box > textarea::placeholder{
+  font-family: var(--primary-font);
+  font-weight: 300;
+}
+.contact__input_box > input:focus::placeholder, .contact__input_box > textarea:focus::placeholder{
+  color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@media screen and (min-width:765px){
+  /* ==================== HEADER ==================== */
+  /* logo */
+  .title-logo img{
+    max-width: 150px;
+  }
+  .nav__menu{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .nav__links{
+    flex-direction: row;
+  }
+  .nav__toggle, .nav__close{
+    display: none;
+  }
+
+
+/* ==================== INICIO ==================== */
+.title__section{
+  min-width: 765px;
+  font-size: 20px;
+  border-bottom: 3px solid var(--secondary-blue-color);
+  
+}
+  /* ==================== CALENDARIO ==================== */
+  .matches__day{
+    font-size: 18px;
+  }
+  .matches__team-img{
+    max-width: 35px;
+  }
+  /* ==================== SWIPER ==================== */
+  .swiper__gallery{
+    width: 100%;
+    max-width: 800px;
+  }
+  .matches__subtitle{
+    font-size: 14px;
+  }
+
+  /* ==================== FOOTER ==================== */
+  .footer .footer__left--contact{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .footer .footer__about {
+    text-align: left;
+  }
+
+
+  .table__quiniela{
+    margin: auto;
+    border: 1px solid var(--blue-color);
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 460px;
+  }
+  /* ==================== REGLAS ==================== */
+  .main__reglas{
+    max-width: 1000px;
+  }
+  
+  /* ==================== CONTACT ==================== */
+  .contact{
+    padding: 5rem 2rem 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  .contact__box_info{
+    order: 0;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .contact__box_info > h3{
+    text-align: left;
+    font-size: 2rem;
+  }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: 350px;
+  }
+  .contact__map{
+    height: 70vh;
+    padding-bottom: 8rem;
+  }
+
+}

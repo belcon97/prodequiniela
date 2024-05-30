@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/title-logo.png">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Quiniela 2024</title>
+
+  </head>
+  <body class="body">
+    <!-- header -->
+    <header class="header" id="header">
+      <nav class="nav container" id="nav">
+        <!-- logo -->
+        <a class="title-logo" href="index.html" class="nav__logo">
+          <img src="/images/logo.png" alt="">
+        </a>
+
+        <!-- bar nav -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="pages/table.html">Tabla</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="pages/calendario.html">Calendario</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="pages/reglas.html">Reglas</a>
+            </li>
+          </ul>
+
+          <!-- close btn -->
+          <button class="nav__close btn_toggle" id="nav-close" aria-label="cerrar menu">
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M17.25 6.75L6.75 17.25"
+              ></path>
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M6.75 6.75L17.25 17.25"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- toggle btn-->
+        <button class="nav__toggle btn_toggle" id="nav-toggle" aria-label="abrir menu">
+          <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M4.75 5.75H19.25"
+            ></path>
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M4.75 18.25H19.25"
+            ></path>
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M4.75 12H19.25"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+      <section class="btn__planilla" >
+        <a href="images/planilla.xlsx" target="_blank"> Descargar la planilla <strong>"AQU&Iacute;"</strong>  y participa </a>
+      </section>
+    </header>
+    <!-- main -->
+    <main class="main">
+
+      <!-- Ranking actual -->
+      <section class="title__section">
+        <p>Ranking actual</p>
+      </section>
+
+      <table class="table__quiniela">
+        <thead>
+          <tr>
+            <th>Posicion</th>
+            <th>Nombre</th>
+            <th>Total de puntos</th>
+            <!-- <th>Ultimos 5</th> -->
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td class="tdata-center">1</td>
+            <td>
+              <a class="tdata-text" href="../pages/usuarios/victor-torres.html">
+                Jugador 1
+              </a> 
+            </td>
+            <td class="tdata-center">-</td>
+          </tr>
+          <tr>
+            <td class="tdata-center">2</td>
+            <td>
+              <a class="tdata-text" href="../pages/usuarios/gibson-villamizar.html">Jugador 2</a> 
+            </td>
+            <td class="tdata-center">-</td>
+          </tr>
+          <tr>
+            <td class="tdata-center">3</td>
+            <td>
+              <a class="tdata-text" href="../pages/usuarios/juan-belandria.html">Jugador 3</a> 
+            </td>
+            <td class="tdata-center">-</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Partidos de la semana -->
+      <section class="title__section">
+        <p>Partidos de la semana </p>
+      </section>
+      <section class="calendario">
+          
+        <!-- 1 / 13 -->
+        <section class="matches">
+          <!-- game day -->
+          <p class="matches__day">
+            20/06/2024
+          </p>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #1 | Grupo A | 20:00
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle">ARG</p>
+                <img class="matches__team-img" src="../images/arg.png" alt="argentina">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/can.png" alt="canada">
+                <p class="matches__subtitle" >CAN</p>
+              </div>
+            </div>
+            <p class="matches__subtitle">Mercedes Benz Stadium - Atlanta, GA
+            </p>
+          </div>
+
+        </section>
+        <!-- 2 / 13 -->
+        <section class="matches">
+          <!-- game day -->
+          <p class="matches__day">
+            21/06/2024
+          </p>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #2 | Grupo A | 19:00
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle" >PER</p>
+                <img class="matches__team-img" src="../images/per.png" alt="peru">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/chi.png" alt="chile">
+                <p class="matches__subtitle" >CHI</p>
+              </div>
+            </div>
+            <p class="matches__subtitle" >AT&T Stadium - Arlington, TX
+            </p>
+          </div>
+
+        </section>
+        <!-- 3 / 13 -->
+        <section class="matches">
+          <!-- game day -->
+          <p class="matches__day">
+            22/06/2024
+          </p>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #3 | Grupo B | 20:00 
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle" >MEX</p>
+                <img class="matches__team-img" src="../images/mex.png" alt="mexico">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/jam.png" alt="jamaica">
+                <p class="matches__subtitle" >JAM</p>
+              </div>
+            </div>
+            <p class="matches__subtitle" >NRG Stadium - Houston, TX
+            </p>
+          </div>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #3 | Grupo B | 15:00
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle" >ECU</p>
+                <img class="matches__team-img" src="../images/ecu.png" alt="ecuador">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/ven.png" alt="chile">
+                <p class="matches__subtitle" >VEN</p>
+              </div>
+            </div>
+            <p class="matches__subtitle" >Levi's Stadium - Santa Clara, CA</p>
+          </div>
+
+        </section>
+        <!-- 4 / 13 -->
+        <section class="matches">
+          <!-- game day -->
+          <p class="matches__day">
+            23/06/2024
+          </p>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #4 | Grupo C | 20:00
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle" >USA</p>
+                <img class="matches__team-img" src="../images/usa.png" alt="estados unidos">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/bol.png" alt="chile">
+                <p class="matches__subtitle" >BOL</p>
+              </div>
+            </div>
+            <p class="matches__subtitle" >AT&T Stadium - Arlington, TX</p>
+          </div>
+          <!-- game -->
+          <div class="matches__list">
+            <p class="matches__subtitle">
+              #4 | Grupo C | 15:00
+            </p>
+            <div class="matches__teams">
+              <div class="matches__team team-right">
+                <p class="matches__subtitle" >URU</p>
+                <img class="matches__team-img" src="../images/uru.png" alt="peru">
+              </div>
+              <p></p>
+              <p>-</p>
+              <p></p>
+              <div class="matches__team team-left">
+                <img class="matches__team-img" src="../images/pan.png" alt="chile">
+                <p class="matches__subtitle" >PAN</p>
+              </div>
+            </div>
+            <p class="matches__subtitle" >Hard Rock Stadium - Miami, FL
+            </p>
+          </div>
+
+        </section>
+      </section>
+
+      
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__distributed container">
+        <div class="footer__left">
+          <p class="footer__links">
+            <a href="index.html">Inicio</a>
+            |
+            <a href="/pages/table.html">Tabla</a>
+            |
+            <a href="pages/calendario.html">Calendario</a>
+            |
+            <a href="pages/reglas.html">Reglas</a>
+          </p>
+          <p class="footer-copyright">Copyright &copy; 2024 All rights reserved</p>
+        </div>
+  
+        <div class="footer__right">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="10" r="3" />
+              <path
+                d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"
+              />
+            </svg>
+  
+            <p>CABA, Buenos Aires, Argentina</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Go to Top -->
+    <a href="#top" class="go-top" data-go-top title="Go to Top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+    </a>
+    <script src="js/index.js"></script>
+  </body>
+</html>
