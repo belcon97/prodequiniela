@@ -314,6 +314,7 @@ ul{
   border: 1px solid var(--blue-color);
   padding: 8px;
   background-color: #d6d6d634;
+  font-size: 13px
 }
 .tdata-center{
   text-align: center;
@@ -328,9 +329,6 @@ ul{
   border-right: 1px solid var(--blue-color); 
   border-top: 1px solid var(--blue-color); 
   font-weight: 700;
-}
-.table__teams{
-  font-size: 14px;
 }
 .title__section--table{
   color: var(--black);
