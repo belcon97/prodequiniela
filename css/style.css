@@ -319,6 +319,9 @@ ul{
 .tdata-center{
   text-align: center;
 }
+.tdata-bold{
+  font-weight: 700;
+}
 .tdata-text{
   color: var(--blue-color);
 }
@@ -347,6 +350,11 @@ ul{
 }
 .match-draw{
   background-color: #fed400;
+}
+.table_comodin{
+  background-color: #0037fe;
+  color: #fff !important;
+
 }
 /* ==================== CALENDARIO ==================== */
 .calendario{
