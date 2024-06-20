@@ -322,6 +322,11 @@ ul{
 .tdata-bold{
   font-weight: 700;
 }
+.tdata-col{
+  color:  var(--red-color) !important;
+  background-color: #d6d6d634;
+  font-weight: 700;
+}
 .tdata-text{
   color: var(--blue-color);
 }
