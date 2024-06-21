@@ -349,12 +349,15 @@ ul{
 }
 .match-victory{
   background-color: #31cb00;
+  color: #ffffff !important;
 }
 .match-defeat{
   background-color: #f80500;
+  color: #ffffff !important;
 }
 .match-draw{
   background-color: #fed400;
+  color: #ffffff !important;
 }
 .table_comodin{
   background-color: #0037fe;
